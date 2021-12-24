@@ -1,0 +1,21 @@
+li {
+    list-style: none;
+}
+
+
+
+.floor_number {
+    float: left;
+}
+
+/* .people_number {
+    float: left;
+}
+
+.elevator_position {
+    float: left;
+}
+
+.waiting_time {
+    float: right;
+} */
