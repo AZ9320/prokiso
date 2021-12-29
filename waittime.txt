@@ -8,11 +8,8 @@
 #乗り降りの時間をp≠0ならば15+p[i]、p=0ならば0とする
 
 
-import math
-import numpy as np
+people=[5,3,1,4,0]
 
-floor=int(input("階数を入力してください："))#階数入力
-
-i=1
-while i<=floor:
-    
+n=int(input("何階？"))
+if n<len(people):
+    print(sum(people[:n-1])+15*(n-1))
