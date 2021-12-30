@@ -1,5 +1,5 @@
 /* 共通部分&basic.html用 */
-
+/* ヘッダー部分 */
 header a {
     text-decoration:none;
     color:rgb(255, 255, 255);
@@ -12,7 +12,10 @@ header {
     margin-bottom:60px;
 }
 
+/* メイン部分 */
 body {
+    min-height:100vh;
+    position:relative;
     color:black;
 }
 
@@ -35,6 +38,7 @@ h1,h2 {
     color:black;
 }
 
+/* フォーム */
 .form-wrapper {
     padding:20px;
 }
@@ -52,15 +56,20 @@ form {
     margin-bottom:20px;
 }
 
+.stairs,.capacity,.number {
+    width:47%;
+}
+
+/* 1つの入力につき1行だと広すぎなので、横ならべにする */
 .two-wrapper{
     display:flex;
     justify-content: space-between;
 }
-
 .two-wrapper_2 {
     display:flex;
 }
 
+/* 1ページ目と2ページ目でボタンの配置を変えた都合上分かりにくいコードですまん */
 button {
     margin-top:15px;
 }
@@ -69,10 +78,7 @@ button {
     margin-top:25px;
 }
 
-.stairs,.capacity,.number {
-    width:47%;
-}
-
+/* フッター */
 footer {
     background-color: #a9a9a9;
     padding:10px;
@@ -107,11 +113,6 @@ small {
     width:80vw;
     border-top:1px silver solid;
     font-size:0.5rem;
-}
-
-body {
-    min-height:100vh;
-    position:relative;
 }
 
 /* basic.html個別用 */
