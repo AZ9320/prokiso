@@ -9,12 +9,13 @@
     <script src="script/basic.js"></script>
     <link rel="stylesheet" href="css/html5reset-1.6.1.css">
     <link rel = "stylesheet" href="css/base.css">
+    <link rel="icon" href="image/favicon.png" type="image/png">
 
 </head>
 <body>
     <header>
         <a href="#">
-            Elewatch
+            <img src="image/logo_gray.png" id="logo" alt="Elewatch">
         </a>
     </header>
 
@@ -24,23 +25,30 @@
 
         <form method = "POST" action = "#">
             <div class="form-wrapper">
-                <div class="time">
-                    <label for="22" class="form-label">1階分移動するのにかかる時間を入力してください</label>
-                    <input type="number" class="form-control" id="time-1" placeholder="">
+                <h3 class="time-title">エレベーターの移動にかかる時間を入力してください</h3>
+                <div class="time-wrapper">
+                    <div class="time">
+                        <label for="22" class="form-label">1階分</label>
+                        <input type="number" class="form-control" id="time-1" placeholder="">
+                    </div>
+                    <div class="time">
+                        <label for="22" class="form-label">2階分</label>
+                        <input type="number" class="form-control" id="time-2" placeholder="">
+                    </div>
                 </div>
-                <div class="time">
-                    <label for="22" class="form-label">2階分移動するのにかかる時間を入力してください</label>
-                    <input type="number" class="form-control" id="time-2" placeholder="">
+                <div class="time-wrapper">
+                    <div class="time">
+                        <label for="22" class="form-label">3階分</label>
+                        <input type="number" class="form-control" id="time-3" placeholder="">
+                    </div>
+                    <div class="time">
+                        <label for="22" class="form-label">4階分</label>
+                        <input type="number" class="form-control" id="time-4" placeholder="">
+                    </div>
                 </div>
-                <div class="time">
-                    <label for="22" class="form-label">3階分移動するのにかかる時間を入力してください</label>
-                    <input type="number" class="form-control" id="time-3" placeholder="">
+                <div id="button-wrapper">
+                    <button type="submit" class="btn btn-primary mb-3 btn-lg" id="start" formaction="index.html">はじめる</button>
                 </div>
-                <div class="time">
-                    <label for="22" class="form-label">4階分移動するのにかかる時間を入力してください</label>
-                    <input type="number" class="form-control" id="time-4" placeholder="">
-                </div>
-                <button type="submit" formaction="index.html" name="button_2" >はじめる</button>
             </div>
         </form>
 

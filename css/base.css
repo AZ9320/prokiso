@@ -1,10 +1,12 @@
+/* 共通部分&basic.html用 */
+
 header a {
     text-decoration:none;
     color:rgb(255, 255, 255);
 }
 
 header {
-    background-color: rgb(158, 149, 149);
+    background-color: #a9a9a9;
     padding:20px;
     font-size:1.5rem;
     margin-bottom:60px;
@@ -60,6 +62,9 @@ form {
 }
 
 button {
+    margin-top:15px;
+}
+#next-button {
     margin-left:7%;
     margin-top:25px;
 }
@@ -69,7 +74,7 @@ button {
 }
 
 footer {
-    background-color: rgb(158, 149, 149);
+    background-color: #a9a9a9;
     padding:10px;
     text-align:center;
     position: absolute;/*絶対位置*/
@@ -107,4 +112,31 @@ small {
 body {
     min-height:100vh;
     position:relative;
+}
+
+/* basic.html個別用 */
+.time-wrapper {
+    display:flex;
+    justify-content: space-between;
+}
+
+.time-wrapper,.time-title {
+    margin-bottom:15px;
+}
+
+.time-title {
+    font-weight: normal;
+}
+
+.time {
+    width:47%;
+}
+
+#button-wrapper {
+    text-align: center;
+}
+
+#logo {
+    height:40px;
+    width:140px;
 }
