@@ -1,0 +1,110 @@
+header a {
+    text-decoration:none;
+    color:rgb(255, 255, 255);
+}
+
+header {
+    background-color: rgb(158, 149, 149);
+    padding:20px;
+    font-size:1.5rem;
+    margin-bottom:60px;
+}
+
+body {
+    color:black;
+}
+
+main {
+    margin-right:30%;
+    margin-left:30%;
+}
+
+main h1 {
+    font-size:2rem;
+    font-weight:normal;
+    margin-bottom:20px;
+}
+
+main h2 {
+    font-weight:normal;
+}
+
+h1,h2 {
+    color:black;
+}
+
+.form-wrapper {
+    padding:20px;
+}
+
+form {
+    background-color: rgb(224, 224, 224);
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.name,
+.stairs,
+.number,
+.capacity {
+    margin-bottom:20px;
+}
+
+.two-wrapper{
+    display:flex;
+    justify-content: space-between;
+}
+
+.two-wrapper_2 {
+    display:flex;
+}
+
+button {
+    margin-left:7%;
+    margin-top:25px;
+}
+
+.stairs,.capacity,.number {
+    width:47%;
+}
+
+footer {
+    background-color: rgb(158, 149, 149);
+    padding:10px;
+    text-align:center;
+    position: absolute;/*絶対位置*/
+    bottom: 0; /*下に固定*/
+    width:100%;
+}
+
+.list-wrapper {
+    display:flex;
+    font-size:1rem;
+    margin:10px 40% 10px;
+    padding:5px 0 5px;
+    justify-content: space-between;
+}
+
+.list-wrapper a {
+    text-decoration:none;
+    color:rgb(255, 255, 255)
+}
+
+.list-wrapper a:hover {
+    color:blue;
+}
+
+.list-wrapper li {
+    list-style: none;
+}
+
+small {
+    width:80vw;
+    border-top:1px silver solid;
+    font-size:0.5rem;
+}
+
+body {
+    min-height:100vh;
+    position:relative;
+}
