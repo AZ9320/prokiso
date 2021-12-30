@@ -1,21 +1,34 @@
 #とりあえず考えてること
 
-#1.階数(floor)入力
+#1.階数(n)入力
 #2.定員(capa)入力
-#3.エレベーターの移動時間
-#4.各階の待ち人数(p[i])
+#3.エレベーターの移動時間(m_time[k])
+#4.各階の待ち人数(people[i])
 #を取得。
-#乗り降りの時間をp≠0ならば15+p[i]、p=0ならば0とする
+#乗り降りの時間をp≠0ならば15+people[i]、p=0ならば0とする
 
 
-people=[5,3,1,4,0]
+n = int(input('階数: '))
+people = [0] * n #待ち人数のリスト
+for i in range(len(people)):
+    people[i] = int(input(f'{i+1}階の待ち人数: ')) 
+print(people)
 
-n=int(input("何階？"))
 if n<len(people):
-    print(sum(people[:n-1])+15*(n-1))
+    g_time=sum(people[:n-1])+15*(n-1) #乗り降りにかかる時間
+
+m=n-1
+m_time=[0]*m #エレベーターの移動時間リスト
+for k in range(len(m_time)):
+    m_time[k]=int(input(f'{k+1}階分の移動時間： '))
+print(m_time)
+
+if m<len(m_time):
+    totalm_time=m_time[0]*n  #エレベーターの移動にかかる時間(1階ごとに止まる場合)
 
 
-#エレベーターの移動時間をどうやって反映させるかわからん
-#リストの中身を外部入力する方法がわからん
+
+#エレベーターの移動時間をどうやって反映させるかわからん(待ち人数0人の場合の処理)
+#g_time+totalm_timeってどうやって計算するんだ？？
 #これは下から上に進む場合で計算してるけど、上からくるやつとどう区別させるか
 #定員オーバーの処理どうするか
