@@ -1,21 +1,6 @@
-#とりあえず考えてること
+from IPython.core.display import update_display  #なんか自動で入ってきたよくわからんやつ
 
-#1.階数(n)入力
-#2.定員(capa)入力
-#3.エレベーターの移動時間(m_time[k])
-#4.各階の待ち人数(people[i])
-#を取得。
-#乗り降りの時間をp≠0ならば15+people[i]、p=0ならば0とする
-
-
-n = int(input('階数: '))
-people = [0] * n #待ち人数のリスト
-for i in range(len(people)):
-    people[i] = int(input(f'{i+1}階の待ち人数: ')) 
-print(people)
-
-if n<len(people):
-    g_time=sum(people[:n-1])+15*(n-1) #乗り降りにかかる時間
+n = int(input('階数: '))#建物の階数を入力
 
 m=n-1
 m_time=[0]*m #エレベーターの移動時間リスト
@@ -23,12 +8,29 @@ for k in range(len(m_time)):
     m_time[k]=int(input(f'{k+1}階分の移動時間： '))
 print(m_time)
 
-if m<len(m_time):
-    totalm_time=m_time[0]*n  #エレベーターの移動にかかる時間(1階ごとに止まる場合)
+people = [0] * n #待ち人数のリスト
+r_people=[0] * n #一応逆順リスト作ったけど多分いらない
+for i in range(len(people)):
+    people[i] = int(input(f'{i+1}階の待ち人数: ')) 
+print(people)
+
+r_people=people[::-1] #多分いらない
+
+geton=int(input("何階から乗るか："))
+elevator=int(input("今エレベーターは何階に停まっているか："))
+
+if geton>elevator:
+    print(sum(people[elevator-1:geton-1])+15*(geton-elevator)+m_time[0]*(geton-elevator)) #下からくるver
+
+elif geton<elevator:
+    print(sum(people[geton:elevator])+15*(elevator-geton)+m_time[0]*(elevator-geton)) #上からくるvar
+
+else:
+    print(0) #その階にエレベーターがいるなら待ち時間はゼロ
 
 
 
-#エレベーターの移動時間をどうやって反映させるかわからん(待ち人数0人の場合の処理)
-#g_time+totalm_timeってどうやって計算するんだ？？
-#これは下から上に進む場合で計算してるけど、上からくるやつとどう区別させるか
-#定員オーバーの処理どうするか
+#↓時間があったらやること↓
+
+#エレベーターの移動時間をどうやって反映させるか(待ち人数0人の場合の処理)←←←できればここまではやり切りたいかも
+#定員オーバーの処理どうするか←←←正直優先順位はそこまで高くないと思う
