@@ -5,7 +5,7 @@ n = int(input('階数: '))#建物の階数を入力
 m=n-1
 m_time=[0]*m #エレベーターの移動時間リスト
 for k in range(len(m_time)):
-    m_time[k]=int(input(f'{k+1}階分の移動時間： '))
+    m_time[k]=int(input(f'{k+1}階分の移動時間： ')) #移動時間一定にするならリストにする必要なし(というかそうしたい)
 print(m_time) #実装時はプリントする必要なし
 
 people = [0] * n #待ち人数のリスト
