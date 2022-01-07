@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elewatchホーム2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="script/basic.js"></script>
+    <link rel="stylesheet" href="css/html5reset-1.6.1.css">
+    <link rel = "stylesheet" href="css/base.css">
+    <link rel="icon" href="image/favicon.png" type="image/png">
+
+</head>
+<body>
+    <header>
+        <a href="#">
+            <img src="image/logo_gray.png" id="logo" alt="Elewatch">
+        </a>
+    </header>
+
+    <main>
+        <h1>ようこそElewatchへ！</h1>
+        <h2>初期設定を入力してください(2/2)</h2>
+
+        <form method = "POST" action = "#">
+            <div class="form-wrapper">
+                <h3 class="time-title">エレベーターの移動にかかる時間を入力してください</h3>
+                <div class="time-wrapper">
+                    <div class="time">
+                        <label for="22" class="form-label">1階分</label>
+                        <input type="number" class="form-control" id="time-1" placeholder="">
+                    </div>
+                    <div class="time">
+                        <label for="22" class="form-label">2階分</label>
+                        <input type="number" class="form-control" id="time-2" placeholder="">
+                    </div>
+                </div>
+                <div class="time-wrapper">
+                    <div class="time">
+                        <label for="22" class="form-label">3階分</label>
+                        <input type="number" class="form-control" id="time-3" placeholder="">
+                    </div>
+                    <div class="time">
+                        <label for="22" class="form-label">4階分</label>
+                        <input type="number" class="form-control" id="time-4" placeholder="">
+                    </div>
+                </div>
+                <div id="button-wrapper">
+                    <button type="submit" class="btn btn-primary mb-3 btn-lg" id="start" formaction="index.html">はじめる</button>
+                </div>
+            </div>
+        </form>
+
+    </main>
+    <footer>
+        <ul class="list-wrapper">
+            <li><a href="#">プライバシーと利用規約</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul>
+        <small>&copy; 2021 Elewatch</small>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
