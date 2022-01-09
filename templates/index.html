@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="/custom.scss"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}">
+    <title>Elewatch</title>
+  </head>
+  <body>
+
+    <!-- <script>
+      window.onload = function () {
+      document.getElementById("pp_os_5").innerHTML = pp_os_5;
+      };
+    </script> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Elewatch</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <!-- <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li> -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  表示階数
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">5階</a></li>
+                  <li><a class="dropdown-item" href="#">4階</a></li>
+                  <li><a class="dropdown-item" href="#">3階</a></li>
+                  <li><a class="dropdown-item" href="#">2階</a></li>
+                  <li><a class="dropdown-item" href="index.html">1階</a></li>
+                  <!-- まだ1階しか動的に作っていない、余裕ができたら他の階も動的に表示できるようにする -->
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <button onclick="getdata()">更新</button>
+      <!-- 自動更新にしたら消す -->
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-7">
+            <table class="table fs-2 mt-5 p-5 text-center">
+                <thead class="table-info">
+                  <tr>
+                    <th scope="col">階</th>
+                    <th scope="col">人数</th>
+                    <th scope="col">エレベーター</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" >5</th>
+                    <td class="float-end" id="pp_os_5">
+                        <i class="bi bi-person-fill"></i>
+                        <i class="bi bi-person-fill"></i>
+                        <i class="bi bi-person-fill"></i>
+                    </td>
+                    <td id="el_5"></td>
+                    <p class="people_inside" id="pp_is_5"></p>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td class="float-end" id="pp_os_4">
+                        <i class="bi bi-person-fill"></i>
+                        <i class="bi bi-person-fill"></i>
+                        <i class="bi bi-person-fill"></i>
+                        <i class="bi bi-person-fill"></i>
+                    </td>
+                    <td id="el_4"></td>
+                    <p class="people_inside" id="pp_is_4"></p>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td class="float-end" id="pp_os_3">
+                        <i class="bi bi-person-fill"></i>
+                        <i class="bi bi-person-fill"></i>
+                        <i class="bi bi-person-fill"></i>
+                    </td>
+                    <td>
+                        <i id="el_3"></i>
+                        <p class="people_inside float-end" id="pp_is_3"></p>
+                        <!--  class="bi bi-box-arrow-up" -->
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td class="float-end" id="pp_os_2">
+                        <i class="bi bi-person-fill"></i>
+                        <i class="bi bi-person-fill"></i>
+                    </td>
+                    <td id="el_2"></td>
+                    <p class="people_inside" id="pp_is_2"></p>
+                  </tr>
+                  <tr class="bg-info">
+                    <!-- ↑背景色はベタうち -->
+                    <th scope="row">1</th>
+                    <td class="float-end" id="pp_os_1">
+                        <i class="bi bi-person-fill"></i>
+                        <i class="bi bi-person-fill"></i>
+                        <i class="bi bi-person-fill"></i>
+                        <i class="bi bi-person-fill"></i>
+                        <i class="bi bi-person-fill"></i>
+                        
+                    </td>
+                    <td id="el_1"></td>
+                    <p class="people_inside float-end" id="pp_is_1"></p>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+          <div class="col-5 align-self-center">
+            <div class="row gy-5">
+                <div class="container-fluid">
+                    <h1 class="display-3 text-center">1Fまで</h1>
+                </div>
+            </div>
+            <div class="row gy-5">
+                <div class="container-fluid">
+                    <h1 class="display-1 text-center second" id="lf_sc">30秒</h1>
+                </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/script2.js') }}"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+  </body>
+</html>

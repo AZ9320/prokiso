@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elewatchホーム</title>
+    <!-- bootstrap導入 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- デフォルトのcss設定をリセット -->
+    <link rel="stylesheet" href="css/html5reset-1.6.1.css">
+    <!-- cssを導入 -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/base.css') }}">
+    <!-- ファビコンの設定 -->
+    <link rel="icon" href="{{ url_for('static', filename='image/favicon.png')}}" type="image/png">
+</head>
+<body>
+    <header>
+        <!-- ロゴ -->
+        <a href="#">
+            <img src="{{ url_for('static', filename='image/logo_gray.png')}}" id="logo" alt="Elewatch">
+        </a>
+    </header>
+
+    <main>
+        <h1>ようこそElewatchへ!</h1>
+        <h2>初期設定を入力してください(1/2)</h2>
+
+        <!-- フォーム開始 -->
+        <form method = "POST">
+            <div class="form-wrapper">
+
+                <!-- デパート名 -->
+                <div class="name">
+                    <label for="22" class="form-label">デパート名</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="○○デパート">
+                </div>
+                <div class="two-wrapper">
+
+                    <!-- 階数 -->
+                    <div class="stairs">
+                        <label class="form-label">階数</label>
+                        <input type="number" class="form-control" name="stairs" id="stairs">
+                    </div>
+                    
+                    <!-- 定員 -->
+                    <div class="capacity">
+                        <label for="exampleFormControlInput1" class="form-label">定員</label>
+                        <input type="number" class="form-control" name="capacity" id="capacity">
+                    </div>
+                </div>
+
+                <div class="two-wrapper_2">
+                    <!-- 台数 -->
+                    <div class="number">
+                        <label for="exampleFormControlInput1" class="form-label">台数</label>
+                        <input type="number" class="form-control" name="number" id="number">
+                    </div>
+
+                    <br>
+
+                    <!-- 送信ボタン -->
+                    <button type="submit" class="btn btn-primary mb-3" id="next-button">次へ</button>
+                    </div>
+                </div>
+        </form>
+    </main>
+
+
+    <!-- フッター -->
+    <footer>
+        <ul class="list-wrapper">
+            <li><a href="#">プライバシーと利用規約</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul>
+        <small>&copy; 2021 Elewatch</small>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
