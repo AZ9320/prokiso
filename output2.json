@@ -1,0 +1,44 @@
+[
+{
+    "floor": "1",
+    "people_outside": "1",
+    "elevator_position": "0",
+    "people_inside": "3",
+    "left_second": "62.0"
+}
+,{
+    "floor": "2",
+    "people_outside": "2",
+    "elevator_position": "0",
+    "people_inside": "3",
+    "left_second": "43.0"
+}
+,{
+    "floor": "3",
+    "people_outside": "4",
+    "elevator_position": "0",
+    "people_inside": "3",
+    "left_second": "22.0"
+}
+,{
+    "floor": "4",
+    "people_outside": "0",
+    "elevator_position": "0",
+    "people_inside": "3",
+    "left_second": "20.0"
+}
+,{
+    "floor": "5",
+    "people_outside": "3",
+    "elevator_position": "1",
+    "people_inside": "3",
+    "left_second": "0"
+}
+,{
+    "floor": "6",
+    "people_outside": "2",
+    "elevator_position": "0",
+    "people_inside": "3",
+    "left_second": "20.0"
+}
+]
