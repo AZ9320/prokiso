@@ -1,0 +1,17 @@
+Loading network.....
+Network successfully loaded
+messi.jpg            predicted in  1.107 seconds
+Objects Detected:    person person person sports ball
+----------------------------------------------------------
+
+SUMMARY
+----------------------------------------------------------
+Task                     : Time Taken (in seconds)
+
+Reading addresses        : 0.007
+Loading batch            : 1.928
+Detection (1 images)     : 1.115
+Output Processing        : 0.000
+Drawing Boxes            : 0.050
+Average time_per_img     : 3.094
+----------------------------------------------------------
